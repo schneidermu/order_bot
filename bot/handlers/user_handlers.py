@@ -36,7 +36,7 @@ async def send(message: Message):
     else:
         try:
             result = await chain.ainvoke(
-                {"input": text},
+                text
             )
             await message.answer(result, parse_mode="Markdown")
             logger.info(f'Пользователь {message.from_user.username} прислал текст: "{text}", получен ответ: "{result}"')

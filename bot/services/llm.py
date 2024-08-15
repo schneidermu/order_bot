@@ -1,5 +1,6 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_community.chat_models import ChatOllama
+from langchain.chains.llm import LLMChain
 
 
 llm = ChatOllama(
@@ -21,4 +22,4 @@ system_prompt = """Ты полезный ассистент анализирую
 
 prompt = PromptTemplate.from_template(system_prompt)
 
-chain = prompt | llm
+chain = LLMChain(llm=llm, prompt=prompt)

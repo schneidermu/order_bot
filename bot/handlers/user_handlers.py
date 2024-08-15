@@ -35,9 +35,9 @@ async def send(message: Message):
         return
     else:
         try:
-            result = await chain.ainvoke(
+            result = await chain.arun(
                 text
-            )["content"]
+            )
             await message.answer(result, parse_mode="Markdown")
             logger.info(f'Пользователь {message.from_user.username} прислал текст: "{text}", получен ответ: "{result}"')
         except Exception as e:

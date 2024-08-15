@@ -6,7 +6,7 @@ from aiogram.types import Message
 from database import Database
 from dotenv import find_dotenv, load_dotenv
 from lexicon.lexicon import LEXICON_COMMANDS
-from bot.services.llm import chain
+from services.llm import chain
 
 load_dotenv(find_dotenv())
 
@@ -43,4 +43,3 @@ async def send(message: Message):
         except Exception as e:
             logger.error(e, exc_info=True)
             await message.answer("Произошла ошибка при генерации ответа")
-

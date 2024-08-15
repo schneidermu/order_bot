@@ -1,0 +1,10 @@
+aiogram==3.8.0
+aiosqlite
+annotated-types==0.7.0
+langchain==0.2.13
+langchain-chroma==0.1.2
+langchain-community==0.2.12
+langchain-core==0.2.30
+langchain-ollama==0.1.1
+jq==1.7.0
+environs

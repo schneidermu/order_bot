@@ -5,7 +5,7 @@ from langchain_community.chat_models import ChatOllama
 llm = ChatOllama(
     model="llama3.1",
     temperature=0.1,
-    base_url="http://0.0.0.0:11434",
+    base_url="http://ollama-container:11434",
     keep_alive=-1,
     num_thread=8,
 )
